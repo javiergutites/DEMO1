@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+ "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+    "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- TEMPLATES -->
+	<definition name="publicTemplate" template="/WEB-INF/jsp/public/layout/public_default_layout.jsp">
+		<put-attribute name="title" value="admin.title" type="string"/>
+		<put-attribute name="description" value="admin.description" type="string"/>
+		<put-attribute name="header" value="/WEB-INF/jsp/admin/layout/header.jsp"/>
+		<put-attribute name="menuPublico" value="/WEB-INF/jsp/public/layout/menuPublico.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/jsp/admin/layout/footer.jsp"/>
+	</definition>
+	
+	<definition name="errorTemplate" template="/WEB-INF/jsp/errors/layout/error_default_layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/admin/layout/header.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/jsp/admin/layout/footer.jsp"/>
+	</definition>
+	
+	<!-- PÁGINAS -->
+	<definition name="home" extends="publicTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/public/home.jsp"/>
+	</definition>
+	
+	<!-- PÁGINAS DE ERROR -->
+	<definition name="error404" extends="errorTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/errors/error404.jsp"/>
+	</definition>
+	
+	<definition name="error.generico" extends="errorTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/errors/genericError.jsp"/>
+	</definition>
+</tiles-definitions>

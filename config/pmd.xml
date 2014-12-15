@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset>
+  <rule ref="rulesets/android.xml/CallSuperLast">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/BooleanInstantiation">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AvoidProtectedFieldInFinalClass">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/BigIntegerInstantiation">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/CallSuperInConstructor">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AssignmentToNonFinalStatic">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/AvoidUsingHardCodedIP">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/optimizations.xml/AddEmptyString">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/SimplifyBooleanExpressions">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AbstractClassWithoutAnyMethod">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strings.xml/AvoidDuplicateLiterals">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/optimizations.xml/AvoidInstantiatingObjectsInLoops">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/javabeans.xml/BeanMembersShouldSerialize">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/android.xml/ProtectLogD">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/strings.xml/AppendCharacterWithChar">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AvoidConstantsInterface">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/migrating.xml/AvoidAssertAsIdentifier">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/naming.xml/AbstractNaming">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/AvoidUsingShortType">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/android.xml/ProtectLogV">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/migrating.xml/AvoidEnumAsIdentifier">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/optimizations.xml/UseStringBufferForStringAppends">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/AvoidAccessibilityAlteration">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AvoidDeeplyNestedIfStmts">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/AvoidUsingNativeCode">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/BadComparison">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/AssignmentInOperand">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AvoidReassigningParameters">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AvoidInstanceofChecksInCatchClause">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strictexception.xml/AvoidThrowingNullPointerException">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/AvoidDecimalLiteralsInBigDecimalConstructor">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/logging-java.xml/AvoidPrintStackTrace">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/BooleanInversion">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/optimizations.xml/AvoidArrayLoops">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/finalizers.xml/AvoidCallingFinalize">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AccessorClassGeneration">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strictexception.xml/AvoidCatchingThrowable">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/naming.xml/BooleanGetMethodName">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/BrokenNullCheck">
+    <priority>2</priority>
+  </rule>
+  <rule ref="rulesets/strictexception.xml/AvoidRethrowingException">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strings.xml/AvoidStringBufferField">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strings.xml/UseStringBufferLength">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/braces.xml/WhileLoopsMustUseBraces">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/EmptyInitializer">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/controversial.xml/AvoidUsingVolatile">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/android.xml/CallSuperFirst">
+    <priority>4</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/AvoidMultipleUnaryOperators">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strictexception.xml/AvoidCatchingNPE">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/design.xml/AbstractClassWithoutAbstractMethod">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/CheckResultSet">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/strictexception.xml/AvoidThrowingRawExceptionTypes">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/ClassCastExceptionWithToArray">
+    <priority>3</priority>
+  </rule>
+  <rule ref="rulesets/basic.xml/AvoidUsingOctalValues">
+    <priority>3</priority>
+  </rule>
+</ruleset>
+

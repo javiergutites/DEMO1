@@ -1,0 +1,14 @@
+<html>
+<body>
+#parse("layout/header.vm")
+
+<h3>Email Prueba</h3>
+
+<div>
+   Probando como un champion. Incluyendo atributo: $text
+</div>
+
+#parse("layout/footer.vm")
+</body>
+
+</html>

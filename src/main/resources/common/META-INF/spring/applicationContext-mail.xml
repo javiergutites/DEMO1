@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${MAIL_HOST}" />
+		<property name="port" value="${MAIL_PORT}" /> 
+		<property name="username" value="${MAIL_USERNAME}" />
+		<property name="password" value="${MAIL_PASSWORD}" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">${MAIL_AUTH}</prop>
+				<prop key="mail.smtp.starttls.enable">${MAIL_TTLS}</prop>
+				<prop key="mail.from">${MAIL_FROM}</prop>
+				<prop key="mail.debug">${MAIL_DEBUG}</prop>
+			</props>
+		</property>
+	</bean>
+	
+   	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+ 		<property name="resourceLoaderPath" value="/WEB-INF/velocity"/>
+ 		<property name="preferFileSystemAccess" value="false"/>
+	</bean>
+	
+</beans>  

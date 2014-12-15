@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+	
+	<!-- Scan spring components -->
+	<context:component-scan base-package="com.vectorsf.*" use-default-filters="false">
+		 <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+	</context:component-scan>
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+	<mvc:annotation-driven/>
+	
+	<!--  Vista login sin controller -->
+	<mvc:view-controller path="/admin/login" />
+	
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1"/>
+		<property name="defaultContentType" value="text/html" />
+	</bean>
+	
+	<!--
+		Maps request paths to @Controller classes; e.g. a path of /owner looks
+		for a controller named OwnerController
+	-->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang" />
+				<bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor" p:paramName="theme" />
+			</list>
+		</property>
+		<property name="defaultHandler">
+			<!--
+				If no @Controller match, map path to a view to render; e.g. the
+				"/index" path would map to the view named "index"
+			-->
+			<bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.i18n.SessionLocaleResolver "
+		id="localeResolver" />
+	
+	<bean id="localeChangeInterceptor"
+      	class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+    	<property name="paramName" value="lang"/>
+	</bean>
+	
+	<!-- View resolver para tiles -->
+	<bean id="tilesViewResolver"
+	    class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+	    <property name="order" value="1"/>
+	    <property name="viewClass">
+	        <value>
+	            org.springframework.web.servlet.view.tiles2.TilesView
+	        </value>
+	    </property>
+	</bean>
+	<bean id="tilesConfigurer"
+	    class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+	    <property name="definitions">
+	        <list>
+	            <value>/WEB-INF/tiles.xml</value>
+	            <value>/WEB-INF/tiles-admin.xml</value>
+	        </list>
+	    </property>
+	</bean>
+	
+	<!--
+	View resolver para jsp estandar con jstl 
+	-->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"
+		id="jstlViewResolver">
+		<property name="order" value="2"/>
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
+	   <property name="location">
+	       <value>/WEB-INF/classes/META-INF/spring/applicationContext-excel.xml</value>
+	   </property>
+	   <property name="order" value="0" />
+	</bean>
+	
+    <!-- Configure the multipart resolver -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1000000"/>
+    </bean>
+
+</beans>

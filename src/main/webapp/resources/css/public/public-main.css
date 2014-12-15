@@ -1,0 +1,74 @@
+/* COMMON */
+body {
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    font-size: 0.8em;
+    text-align:center;
+}
+h1 {
+    color: #0B55C4;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 8px;
+}
+input, select {
+    border: 1px solid #D1D1D1;
+    font-size: 10px;
+    padding:4px 4px 4px 4px;
+    vertical-align: middle;
+    font-size:13px;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+}
+.wrapper {
+    margin: 0 auto;
+    padding-top: 100px;
+    position: relative;
+    top: 0;
+    width: 985px;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center {
+	margin:0 auto;
+}
+
+.box {
+	border: 1px solid #D1D1D1;
+	border-radius: 15px;
+	-moz-border-radius: 10px;
+}
+
+/* HEADER */
+.wrapper .header {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 5px solid #FDB813;
+    border-bottom: 1px solid #D1D1D1;
+    border-left: 1px solid #D1D1D1;
+    border-right: 1px solid #D1D1D1;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: -8px;
+    width: 984px;
+}
+.wrapper .header .left {
+    height: 54px;
+}
+.wrapper .header .right {
+	padding-right: 20px;
+}
+
+/* BODY */
+.wrapper .body {
+    overflow: hidden;
+    padding-bottom: 20px;
+    width: 984px;
+    min-height: 367px;
+}

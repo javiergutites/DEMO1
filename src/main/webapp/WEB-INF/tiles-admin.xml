@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<!-- TEMPLATES -->
+	<definition name="adminTemplate" template="/WEB-INF/jsp/admin/layout/admin_default_layout.jsp">
+		<put-attribute name="title" value="admin.title" type="string"/>
+		<put-attribute name="description" value="admin.description" type="string"/>
+		<put-attribute name="header" value="/WEB-INF/jsp/admin/layout/header.jsp"/>
+		<put-attribute name="menu" value="/WEB-INF/jsp/admin/layout/menu.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/jsp/admin/layout/footer.jsp"/>
+	</definition>
+	
+	<!-- PÁGINAS SIMPLES -->
+	<definition name="admin.login" extends="adminTemplate">
+		<put-attribute name="title" value="admin.title" type="string"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/login.jsp" />
+	</definition>
+	
+	<definition name="admin.home" extends="adminTemplate">
+		<put-attribute name="description" value="admin.description" type="string"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/home.jsp"/>
+	</definition>
+	
+	<!-- PÁGINAS GESTION PRIVADA -->
+	<definition name="admin.user.list.content" template="/WEB-INF/jsp/admin/layout/admin_default_body_layout.jsp">
+		<put-attribute name="searcher" value="/WEB-INF/jsp/admin/user/user-searcher.jsp"/>
+		<put-attribute name="list" value="/WEB-INF/jsp/admin/user/user-list.jsp"/>
+		<put-attribute name="new" value="/WEB-INF/jsp/admin/user/user-new.jsp"/>
+	</definition>
+	<definition name="admin.user.list" extends="adminTemplate">
+		<put-attribute name="body" value="admin.user.list.content"/>
+	</definition>
+	
+	<definition name="admin.company.list.content" template="/WEB-INF/jsp/admin/layout/admin_default_body_layout.jsp">
+		<put-attribute name="searcher" value="/WEB-INF/jsp/admin/company/company-searcher.jsp"/>
+		<put-attribute name="list" value="/WEB-INF/jsp/admin/company/company-list.jsp"/>
+		<put-attribute name="new" value="/WEB-INF/jsp/admin/company/company-new.jsp"/>
+	</definition>
+	<definition name="admin.company.list" extends="adminTemplate">
+		<put-attribute name="body" value="admin.company.list.content"/>
+	</definition>
+	
+	<definition name="admin.profile.list.content" template="/WEB-INF/jsp/admin/layout/admin_default_body_layout.jsp">
+		<put-attribute name="searcher" value="/WEB-INF/jsp/admin/profile/profile-searcher.jsp"/>
+		<put-attribute name="list" value="/WEB-INF/jsp/admin/profile/profile-list.jsp"/>
+		<put-attribute name="new" value="/WEB-INF/jsp/admin/profile/profile-new.jsp"/>
+	</definition>
+	<definition name="admin.profile.list" extends="adminTemplate">
+		<put-attribute name="body" value="admin.profile.list.content"/>
+	</definition>
+	
+	<definition name="admin.role.list.content" template="/WEB-INF/jsp/admin/layout/admin_default_body_layout.jsp">
+		<put-attribute name="searcher" value="/WEB-INF/jsp/admin/role/role-searcher.jsp"/>
+		<put-attribute name="list" value="/WEB-INF/jsp/admin/role/role-list.jsp"/>
+		<put-attribute name="new" value="/WEB-INF/jsp/admin/role/role-new.jsp"/>
+	</definition>
+	<definition name="admin.role.list" extends="adminTemplate">
+		<put-attribute name="body" value="admin.role.list.content"/>
+	</definition>
+	
+	<definition name="admin.user.detail" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/user/user-detail.jsp"/>
+	</definition>
+	<definition name="admin.company.detail" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/company/user-detail.jsp"/>
+	</definition>
+	<definition name="admin.profile.detail" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/profile/profile-detail.jsp"/>
+	</definition>
+	<definition name="admin.role.detail" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/role/role-detail.jsp"/>
+	</definition>
+	
+	<!-- PAGINAS DESARROLLO -->
+	<definition name="admin.development.excel" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/development/excel-test.jsp"/>
+	</definition>
+	<definition name="admin.development.pdf" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/development/pdf-test.jsp"/>
+	</definition>
+	<definition name="admin.development.mail" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/development/mail-test.jsp"/>
+	</definition>
+	<definition name="admin.development.scheduler" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/development/scheduler-test.jsp"/>
+	</definition>
+	<definition name="admin.development.ftp" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/development/ftp-test.jsp"/>
+	</definition>
+	
+	
+	<!-- PÁGINAS GESTION PUBLICA -->
+	
+</tiles-definitions>
